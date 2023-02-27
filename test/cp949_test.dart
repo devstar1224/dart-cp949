@@ -2,7 +2,9 @@ import 'package:test/test.dart';
 import 'package:cp949/cp949.dart' as cp949;
 
 void main() {
+
   test('decode() converts cp949 byte code units to native String.', () {
+    var result = cp949.decode([0xBE, 0xC6, 0xB8, 0xA7, 0xB4, 0xD9, 0xBF, 0xEE]);
     expect(cp949.decode([0xBE, 0xC6, 0xB8, 0xA7, 0xB4, 0xD9, 0xBF, 0xEE]),
         equals("아름다운"));
   });
